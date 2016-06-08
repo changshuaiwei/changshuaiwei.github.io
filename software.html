@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 3.0 License
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Changshuai Wei</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="wrapper">
+		<div id="logo">
+			
+			<h1><a href="#">Changshuai Wei</a></h1>
+			<p>Epidemilogy & Biostatistics</p>
+		</div>
+	<div id="header">
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="first"><a href="index.html" accesskey="1" title="">Home</a></li>
+			<li><a href="education.html" accesskey="2" title="">Education</a></li>
+			<li><a href="publication.html" accesskey="3" title="">Publication</a></li>
+			<li><a href="working.html" accesskey="4" title="">Working</a></li>
+			<li><a href="software.html" accesskey="5" title="">Software</a></li>
+			<li><a href="contact.html" accesskey="6" title="">Contact me</a></li>
+		</ul>
+	</div>
+	<div id="page">
+		<div id="content">
+			<div class="post">
+				
+				I've graduated from MSU and this site will not be maintained any more. Please go to my new website at <a href="https://sites.google.com/site/weichangshuai">https://sites.google.com/site/weichangshuai</a> 
+				
+				<h2 class="title" id="GWGGI"> GWGGI: Genome-Wide Gene-Gene Interaction Analysis </h2>
+				
+
+				<div class="entry">
+					<h3 class="title"> Download </h3>
+						
+						<table border=1 width=80%>
+							<tr>
+							<th>Platform</th>
+							<th>File</th>
+							<th>Version</th>
+							</tr>
+
+							<tr>
+							<td>Unix</td>
+							<td><a href="download/gwggi.unix.zip">gwggi.unix.zip</a></td>
+							<td> v1.0 </td>
+							</tr>
+
+
+							<tr>
+							<td>Windows</td>
+							<td> <a href="download/gwggi.win.zip">gwggi.win.zip</a> </td>
+							<td> v1.0 </td>
+							</tr>
+
+
+							<tr>
+							<td>C++ source</td>
+							<td><a href="download/gwggi.code.zip">gwggi.code.zip</a></td>
+							<td> v1.0 </td>
+							</tr>
+
+							</table>
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				<div class="entry">
+						<h3 class="title">How to cite:</h3>
+						<h4>Method Reference</h4>
+						<li><b>Wei C</b>, Schaid DJ, Lu Q. Trees Assembling Mann-Whitney Approach for Detecting Genome-wide Joint Association among Low-Marginal-Effect loci. Genetic Epidemiology. 2013;37(1):84-91</li>
+						<li>Lu Q, <b>Wei C</b>, Ye C, Li M, Elston RC. A Likelihood Ratio based Mann-Whitney Approach Finds Novel Replicable Joint Gene Action for Type 2 Diabetes. Genetic Epidemiology. 2012; 36(6):583-593</li>
+						<h4>Software Reference</h4>
+						<li><a href="publication.html">reference will be added in the future</a></li>
+						
+						<p class="clearfix">&nbsp;</p>
+				</div>
+
+
+				<div class="entry">
+					<h3 class="title"> Data format </h3>
+						<p>GWGGI can read <a href="http://pngu.mgh.harvard.edu/~purcell/plink/"> plink </a> binary format, using
+							<tt>--bfile filename</tt>.
+						</p>
+						<p>GWGGI can also read text format, using <tt>--file filename</tt>.
+						</p>
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+
+				<div class="entry">
+					<h3 class="title"> Likelihood Ratio Forword Mann-Whitney </h3>
+						<p> Fast forward searching higher order joint association, using 
+							<tt>--lmw</tt>.
+						</p>
+						<p>Example: <tt>gwggi --bfile filename --lmw --out resultfile</tt>.
+						</p>
+						<p> More complicated example: <tt> gwggi --bfile filename --lmw --hz --hiorder 10 --maxauc 0.99 --out resultfile</tt>
+						</p>
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				
+				<div class="entry">
+					<h3 class="title"> Trees Assembling Mann-Whitney </h3>
+						<p> Assembling multiple trees to search low-marginal effect, using 
+							<tt>--tamw</tt>.
+						</p>
+						<p>Example: <tt>gwggi --bfile filename --tamw --out resultfile</tt>.
+						</p>
+						<p> More complicated example: <tt> gwggi --bfile filename --tamw --converge --ntree 10000 --td-burnin --showntree --out resultfile</tt>
+						</p>
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				
+				
+				<div class="entry">
+					<h3 class="title"> Options&Functions </h3>
+
+					<h4 class="title"> Functions </h4>
+					<ul>
+						<li><tt>--bfile string</tt>, read binary file</li>
+						<li><tt>--file string</tt>, read text file</li>
+						<li><tt>--out string</tt>, file for output</li>
+						<li><tt>--lmw</tt>, Likelihood Ratio Mann-Whitney</li>
+						<li><tt>--lmw-apl string</tt>, apply lmw to a new data</li>
+						<li><tt>--tamw</tt>, Trees Assembling Mann-Whitney</li>
+						<li><tt>--tamw-apl</tt>, apply tamw to a new data</li>
+						
+					</ul>
+					
+					<h4 class="title"> Options </h4>
+					<ul>
+						<li><tt>--hz</tt>, allow heterozygosity ( Aa v.s. aa,AA )</li>
+						<li><tt>--hiorder int</tt>, define the highest order for searching, default is 10 </li>
+						<li><tt>--maxauc float</tt>, define the highest auc for searching, default is 0.9 </li>
+						<li><tt>--converge</tt>, show the converging status of tamw in *.monitor file</li>
+						<li><tt>--ntree int</tt>, number of trees in tamw, default is 2000</li>
+						<li><tt>--tree-depth int</tt>, set tree depth, default is 6</li>
+						<li><tt>--td-burnin</tt>, use first 50 bootstrap sample to determine the trees depth</li>
+						<li><tt>--showntree</tt>, show the number of tree built as program is running</li>
+						<li><tt>--clsf int</tt>, number of genetic variants randomly selected in tamw</li>
+						<li><tt>--clsf-sqrt</tt>, using sqrt of total genetic variant for --clsf in tamw, default is ln </li>
+						<li><tt>--showcv</tt>, show the progress of the program when runing lmw </li>
+						<li><tt>--no-cv</tt>, scaning without cross-validation for lmw </li>
+						<li><tt>--lr-sub string</tt>, output the subject specific LR value </li>
+					</ul>
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				<h2 class="title" id="HWU"> HWU: Heterogeneity Weight U test for High Dementional Data </h2>
+				
+
+				<div class="entry">
+					<h3 class="title"> Download </h3>
+						
+						<table border=1 width=80%>
+							<tr>
+							<th>Platform</th>
+							<th>File</th>
+							<th>Version</th>
+							</tr>
+
+							<tr>
+							<td>Unix</td>
+							<td><a href="download/hwu.unix.zip">hwu.unix.zip</a></td>
+							<td> v1.0 </td>
+							</tr>
+
+
+							<tr>
+							<td>Windows</td>
+							<td> <a href="download/hwu.win.zip">hwu.win.zip</a> </td>
+							<td> v1.0 </td>
+							</tr>
+
+
+							<tr>
+							<td>C++ source</td>
+							<td><a href="download/hwu.source.zip">hwu.source.zip</a></td>
+							<td> v1.0 </td>
+							</tr>
+
+							</table>
+						
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				<div class="entry">
+						<h3 class="title">How to cite:</h3>
+						<h4>Method Reference</h4>
+						<li><a href="publication.html">reference will be added in the future</a></li>
+						<h4>Software Reference</h4>
+						<li><a href="publication.html">reference will be added in the future</a></li>
+						
+						<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				<div class="entry">
+
+					<h4 class="title"> Functions </h4>
+					<ul>
+						<li> <tt>string</tt> stands for some <tt>string</tt>s. <tt>int</tt> stands for some int number.</li>
+						<li> --bfile <tt>string</tt> : read plink binary format data files <tt>string</tt> read binary file</li>
+						<li> --file <tt>string</tt>: read text format data files <tt>string</tt></li>
+						<li> --hwu: perform HWU analysis</li>
+						<li> --out <tt>string</tt>: output files <tt>string</tt></li>
+						<li> --wIBS-wt: use weighted IBS to construct latent population structure</li>
+						<li> --IBS-wt: use IBS to construct latent population structure</li>
+						<li> --cov-wt <tt>string</tt> : use covariates in <tt>string</tt> files to construct latent population structure</li>
+						<li> --dv <tt>int</tt>: output the most significant <tt>int</tt> SNPs (for high demensional scan) </li>
+						<!-- <li> --mp <tt>int</tt>: use <tt>int</tt> cpus (if the machine has) to performce parallel computing (for  high demensional scan) </li>
+						-->
+						<li> --write-Wmt <tt>string</tt> : output kappa matrix for latent population structure to file <tt>string</tt> </li>
+						<li> --flt : use float accuracy when calculate the rank of SNPs (for  high demensional scan) </li>
+						<li> --read-Wmt <tt>string</tt>: read kappa matrix stored in file <tt>string</tt> </li>
+						<li> --cov <tt>string</tt>: read covariates that used for covariates adjustment in file <tt>string</tt> </li>
+						<li> --PCwt <tt>int</tt>: calculate the first <tt>int</tt> eigen vectors for matrix kappa </li>
+						
+					</ul>
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				<h2 class="title" id="GTSU"> GTSU: Gene-Trait Similarity U test </h2>
+				
+
+				<div class="entry">
+					<h3 class="title"> Download </h3>
+						
+						<table border=1 width=80%>
+							<tr>
+							<th>Platform</th>
+							<th>File</th>
+							<th>Version</th>
+							</tr>
+
+							<tr>
+							<td>Unix</td>
+							<td><a href="download/gtsu.unix.zip">gtsu.unix.zip</a></td>
+							<td> v1.0 </td>
+							</tr>
+
+
+							<tr>
+							<td>Windows</td>
+							<td> <a href="download/gtsu.win.zip">gtsu.win.zip</a> </td>
+							<td> v1.0 </td>
+							</tr>
+
+
+							<tr>
+							<td>C++ source</td>
+							<td><a href="download/gtsu.source.zip">gtsu.source.zip</a></td>
+							<td> v1.0 </td>
+							</tr>
+
+							</table>
+						
+						
+					<p class="clearfix">&nbsp;</p>
+				</div>
+				
+				<div class="entry">
+						<h3 class="title">How to cite:</h3>
+						<h4>Method Reference</h4>
+						<li><a href="publication.html">reference will be added in the future</a></li>
+						<h4>Software Reference</h4>
+						<li><a href="publication.html">reference will be added in the future</a></li>
+						
+						<p class="clearfix">&nbsp;</p>
+				</div>				
+				
+			</div>				
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<h2>Useful Link</h2>
+				</li>
+				
+				<li>
+					<h2>Software</h2>
+					<ul>
+						<li><a href="#GWGGI">GWGGI</a></li>
+						<li><a href="#HWU">HWU</a></li>
+						<li><a href="#GTSU">GTSU</a></li>
+				</ul>
+				</li>
+				
+				
+				
+				<li>
+					<h2>Website</h2>
+					<ul>
+						<li><a href="http://www.ted.com/">TED</a></li>
+						<li><a href="http://www.economist.com/">Economist</a></li>
+						<li><a href="http://www.ifeng.com/">凤凰网</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Research Journal</h2>
+					<ul>
+						<li><a href="http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291098-2272/">Genetic EPI</a></li>
+						<li><a href="http://www.cell.com/AJHG/">AJHG</a></li>
+						<li><a href="http://www.plosgenetics.org/">Plos Genetics</a></li>
+						<li><a href="http://www.nature.com/ng/index.html">Nature Genetics</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39056121-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<div id="footer">
+	<p>Copyright &copy; 2011 Changshuai Wei</p>
+</div>
+</body>
+</html>
