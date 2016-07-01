@@ -86,80 +86,7 @@ Released for free under a Creative Commons Attribution 3.0 License
 				</div>
 
 
-				<div class="entry">
-					<h3 class="title"> Data format </h3>
-						<p>GWGGI can read <a href="http://pngu.mgh.harvard.edu/~purcell/plink/"> plink </a> binary format, using
-							<tt>--bfile filename</tt>.
-						</p>
-						<p>GWGGI can also read text format, using <tt>--file filename</tt>.
-						</p>
-					<p class="clearfix">&nbsp;</p>
-				</div>
 				
-
-				<div class="entry">
-					<h3 class="title"> Likelihood Ratio Forword Mann-Whitney </h3>
-						<p> Fast forward searching higher order joint association, using 
-							<tt>--lmw</tt>.
-						</p>
-						<p>Example: <tt>gwggi --bfile filename --lmw --out resultfile</tt>.
-						</p>
-						<p> More complicated example: <tt> gwggi --bfile filename --lmw --hz --hiorder 10 --maxauc 0.99 --out resultfile</tt>
-						</p>
-						
-					<p class="clearfix">&nbsp;</p>
-				</div>
-				
-				
-				<div class="entry">
-					<h3 class="title"> Trees Assembling Mann-Whitney </h3>
-						<p> Assembling multiple trees to search low-marginal effect, using 
-							<tt>--tamw</tt>.
-						</p>
-						<p>Example: <tt>gwggi --bfile filename --tamw --out resultfile</tt>.
-						</p>
-						<p> More complicated example: <tt> gwggi --bfile filename --tamw --converge --ntree 10000 --td-burnin --showntree --out resultfile</tt>
-						</p>
-						
-					<p class="clearfix">&nbsp;</p>
-				</div>
-				
-				
-				
-				<div class="entry">
-					<h3 class="title"> Options&Functions </h3>
-
-					<h4 class="title"> Functions </h4>
-					<ul>
-						<li><tt>--bfile string</tt>, read binary file</li>
-						<li><tt>--file string</tt>, read text file</li>
-						<li><tt>--out string</tt>, file for output</li>
-						<li><tt>--lmw</tt>, Likelihood Ratio Mann-Whitney</li>
-						<li><tt>--lmw-apl string</tt>, apply lmw to a new data</li>
-						<li><tt>--tamw</tt>, Trees Assembling Mann-Whitney</li>
-						<li><tt>--tamw-apl</tt>, apply tamw to a new data</li>
-						
-					</ul>
-					
-					<h4 class="title"> Options </h4>
-					<ul>
-						<li><tt>--hz</tt>, allow heterozygosity ( Aa v.s. aa,AA )</li>
-						<li><tt>--hiorder int</tt>, define the highest order for searching, default is 10 </li>
-						<li><tt>--maxauc float</tt>, define the highest auc for searching, default is 0.9 </li>
-						<li><tt>--converge</tt>, show the converging status of tamw in *.monitor file</li>
-						<li><tt>--ntree int</tt>, number of trees in tamw, default is 2000</li>
-						<li><tt>--tree-depth int</tt>, set tree depth, default is 6</li>
-						<li><tt>--td-burnin</tt>, use first 50 bootstrap sample to determine the trees depth</li>
-						<li><tt>--showntree</tt>, show the number of tree built as program is running</li>
-						<li><tt>--clsf int</tt>, number of genetic variants randomly selected in tamw</li>
-						<li><tt>--clsf-sqrt</tt>, using sqrt of total genetic variant for --clsf in tamw, default is ln </li>
-						<li><tt>--showcv</tt>, show the progress of the program when runing lmw </li>
-						<li><tt>--no-cv</tt>, scaning without cross-validation for lmw </li>
-						<li><tt>--lr-sub string</tt>, output the subject specific LR value </li>
-					</ul>
-						
-					<p class="clearfix">&nbsp;</p>
-				</div>
 				
 				<h2 class="title" id="HWU"> HWU: Heterogeneity Weight U test for High Dementional Data </h2>
 				
@@ -210,31 +137,7 @@ Released for free under a Creative Commons Attribution 3.0 License
 						<p class="clearfix">&nbsp;</p>
 				</div>
 				
-				<div class="entry">
 
-					<h4 class="title"> Functions </h4>
-					<ul>
-						<li> <tt>string</tt> stands for some <tt>string</tt>s. <tt>int</tt> stands for some int number.</li>
-						<li> --bfile <tt>string</tt> : read plink binary format data files <tt>string</tt> read binary file</li>
-						<li> --file <tt>string</tt>: read text format data files <tt>string</tt></li>
-						<li> --hwu: perform HWU analysis</li>
-						<li> --out <tt>string</tt>: output files <tt>string</tt></li>
-						<li> --wIBS-wt: use weighted IBS to construct latent population structure</li>
-						<li> --IBS-wt: use IBS to construct latent population structure</li>
-						<li> --cov-wt <tt>string</tt> : use covariates in <tt>string</tt> files to construct latent population structure</li>
-						<li> --dv <tt>int</tt>: output the most significant <tt>int</tt> SNPs (for high demensional scan) </li>
-						<!-- <li> --mp <tt>int</tt>: use <tt>int</tt> cpus (if the machine has) to performce parallel computing (for  high demensional scan) </li>
-						-->
-						<li> --write-Wmt <tt>string</tt> : output kappa matrix for latent population structure to file <tt>string</tt> </li>
-						<li> --flt : use float accuracy when calculate the rank of SNPs (for  high demensional scan) </li>
-						<li> --read-Wmt <tt>string</tt>: read kappa matrix stored in file <tt>string</tt> </li>
-						<li> --cov <tt>string</tt>: read covariates that used for covariates adjustment in file <tt>string</tt> </li>
-						<li> --PCwt <tt>int</tt>: calculate the first <tt>int</tt> eigen vectors for matrix kappa </li>
-						
-					</ul>
-						
-					<p class="clearfix">&nbsp;</p>
-				</div>
 				
 				<h2 class="title" id="GSU"> GSU: Generalized Similarity U test for sequencing association analysis </h2>
 				
